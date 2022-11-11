@@ -1,5 +1,6 @@
 package package1;
 import java.awt.Color;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -7,6 +8,8 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
+
+import java.awt.BasicStroke;
 public class LancerApp1 {
 
 	public static void main(String[] args) throws IOException {
@@ -40,6 +43,11 @@ public class LancerApp1 {
 		
 		Visage v = new Visage(d);
 		d.ajouterObjet(v);
+		
+		Forme f1 = new Etoile(350,100,50,8.f,Color.red,Color.yellow);
+		Forme f2 = new PolygoneRegulier(5,240,40,40,4.0f,Color.DARK_GRAY,null);
+		d.ajouterObjet(f1);
+		d.ajouterObjet(f2);
 		
 		while(true) {
 		// la zone de dessin se r�affiche

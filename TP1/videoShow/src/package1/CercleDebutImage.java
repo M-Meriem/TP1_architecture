@@ -6,16 +6,16 @@ import java.awt.image.BufferedImage;
 public class CercleDebutImage extends CercleDebut {
 
 	/**
-     * l'image a afficher pour le début de cercle
+     * l'image a afficher pour le dï¿½but de cercle
      */
     private final BufferedImage img;
     
     /**
      * 
-     * @param xInit abscisse initial du centre du cerlce de début
-     * @param yInit ordonnées intiial du centre du cerlce de début
-     * @param pointe la pointe initialdu cerlce de début
-     * @param img l'image du cerlce de début
+     * @param xInit abscisse initial du centre du cerlce de dï¿½but
+     * @param yInit ordonnï¿½es intiial du centre du cerlce de dï¿½but
+     * @param pointe la pointe initialdu cerlce de dï¿½but
+     * @param img l'image du cerlce de dï¿½but
      */
     public CercleDebutImage(int xInit, int yInit, int cap, BufferedImage img) {
         super(xInit, yInit, img.getWidth() /2 , cap);
