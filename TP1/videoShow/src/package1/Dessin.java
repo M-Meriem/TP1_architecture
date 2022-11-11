@@ -37,7 +37,7 @@ public class Dessin extends JPanel{
      * @param ch le train  à ajouter au Dessin
      * @see train
      */
-    public void ajouterObjet(TrainCercle t) {
+    public void ajouterObjet(IObjetDessinable t) {
 
         if (!objDessin.contains(t)) {
             // l'objet n'est pas déjà dans la liste
@@ -50,7 +50,7 @@ public class Dessin extends JPanel{
     }
 
     /**
-     * temporisation de l'animation.
+     * temporisation de l'animation. 
      *
      * @param duree delai de temporisation en ms.
      */
@@ -82,8 +82,9 @@ public class Dessin extends JPanel{
     public void animer() {
         //  dessiner les Objets que contient le dessin
         for (IObjetDessinable c : objDessin) {
-        	c.deplacer();
-            
+        if (c instanceof IObjetAnimable ) {
+        	((IObjetAnimable)c).deplacer();
+        }
         }
     }
 
